@@ -49,7 +49,7 @@ Options:
 - **:activator**: Is the DOM object that can activate the field. If not defined the user will making editable by clicking on it.
 - **:sanitize**: True by default. If set to false the input/textarea will accept html tags.
 - **:html_args**: Hash of html arguments, such as maxlength, default-value etc.
-
+- **:object_name**: Used for overriding the default params key used for the object (the data-object attribute). Useful for e.g. STI scenarios where best_in_place should post to a common controller for different models.
 
 I created a [test_app](https://github.com/bernat/best_in_place/tree/master/test_app) and a running demo in heroku to test the features.
 

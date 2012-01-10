@@ -123,8 +123,16 @@ describe BestInPlace::BestInPlaceHelpers do
         span = nk.css("span")
         span.attribute("data-activator").value.should == "awesome"
       end
-    end
 
+      describe "object_name" do
+        it "should change the data-object value" do
+          out = helper.best_in_place @user, :name, :object_name => "my_user"
+          nk = Nokogiri::HTML.parse(out)
+          span = nk.css("span")
+          span.attribute("data-object").value.should == "my_user"
+        end
+      end
+    end
 
     context "with a text field attribute" do
       before do
